@@ -1,0 +1,17 @@
+Modelo de prompt para vibe coding para gerar o html do projeto: 
+
+
+"Atue como um desenvolvedor Front-end especialista em acessibilidade. Preciso criar um arquivo index.html para a interface web de um aplicativo chamado 'Simplifica', que funcionará como um atalho de tela inicial para usuárias idosas com dificuldades visuais e motoras.
+
+    Requisitos obrigatórios da interface:
+
+        Design de alto contraste: fundo escuro (preto/chumbo) com textos em branco.
+
+        Fontes em tamanho extra-grande para legibilidade.
+
+        Layout em coluna (flexbox) com 3 botões gigantes ocupando quase toda a largura da tela.
+
+        Os botões devem ser links diretos (<a>): um para o WhatsApp ([https://wa.me/](https://wa.me/)...), um para o discador (tel:...) e um botão vermelho de SOS que abre o WhatsApp com uma mensagem de socorro pré-escrita.
+
+    
+Restrição técnica: Gere a versão de código HTML e CSS (em um único arquivo) mais simples e curta possível, mas que resolva o meu problema. Não utilize frameworks externos, lógicas complexas de JavaScript ou animações."
