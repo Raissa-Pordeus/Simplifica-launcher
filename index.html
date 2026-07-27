@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simplifica</title>
+    <style>
+        body { 
+            background-color: #000000; 
+            color: white; 
+            font-family: sans-serif; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            height: 100vh; 
+            margin: 0; 
+            gap: 20px; 
+        }
+        a { text-decoration: none; }
+        .btn { 
+            background-color: #333333; 
+            color: white; 
+            font-size: 3rem; /* Fonte extra-grande para E1 */ 
+            padding: 30px; 
+            border-radius: 15px; 
+            width: 85vw; 
+            text-align: center; 
+            border: 3px solid #ffffff; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: 20px; 
+        }
+        .btn-sos { background-color: #d32f2f; font-weight: bold; border-color: #ff5252; }
+        .avatar { width: 60px; height: 60px; border-radius: 50%; }
+    </style>
+</head>
+<body>
+
+    <!-- Substitua o link do WhatsApp e o nome da imagem gerada no Passo 2 -->
+    <a href="https://wa.me/5583999999999" class="btn">
+        <img src="avatar.png" alt="Foto" class="avatar"> WhatsApp
+    </a>
+
+    <!-- Link direto para o discador -->
+    <a href="tel:+5583999999999" class="btn">
+        📞 Ligar
+    </a>
+
+    <!-- Botão SOS que abre o WhatsApp com mensagem pré-escrita -->
+    <a href="https://wa.me/5583999999999?text=Preciso%20de%20ajuda!" class="btn btn-sos">
+        🚨 SOCORRO
+    </a>
+
+</body>
+</html>
