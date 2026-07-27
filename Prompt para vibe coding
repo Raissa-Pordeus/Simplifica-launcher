@@ -17,3 +17,38 @@ Fontes em tamanho extra-grande para legibilidade.
 Layout em coluna (flexbox) com 3 botões gigantes ocupando quase toda a largura da tela.
 Os botões devem ser links diretos (<a>): um para o WhatsApp ([https://wa.me/](https://wa.me/)...), um para o discador (tel:...) e um botão vermelho de SOS que abre o WhatsApp com uma mensagem de socorro pré-escrita.
 Restrição técnica: Gere a versão de código HTML e CSS (em um único arquivo) mais simples e curta possível, mas que resolva o meu problema. Não utilize frameworks externos, lógicas complexas de JavaScript ou animações."
+
+
+Para o Manifest.json temos o seguinte prompt:
+
+Atue como um desenvolvedor Front-end. Preciso criar o arquivo manifest.json para transformar minha página web em um PWA (Progressive Web App) que simula um aplicativo nativo.
+O projeto se chama 'Simplifica Launcher' (nome curto: 'Simplifica') e o arquivo inicial é o ./index.html.
+
+Configure o display como standalone para esconder a barra de navegação do celular.
+
+Defina a cor de fundo (background_color) e a cor do tema (theme_color) como preto (#000000).
+
+Adicione um array de ícones com apenas um ícone apontando para avatar.png, com o tamanho 192x192 e do tipo image/png.
+
+Lembre-se: se você precisar gerar algum código, gere a versão mais simples e curta possível mas que resolva o meu problema. Retorne apenas o código JSON estruturado. 
+Resposta:
+
+Your JSON file is ready.
+
+JSON
+{
+  "name": "Simplifica Launcher",
+  "short_name": "Simplifica",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "avatar.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
+
