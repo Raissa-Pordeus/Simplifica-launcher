@@ -1,0 +1,157 @@
+Link: https://notebooklm.google.com/notebook/d2067a2e-948e-4fe4-9180-8c638b347b01 
+
+Relatório de Síntese: Pesquisa de Campo – Projeto Simplifica
+  Este documento apresenta a análise das entrevistas realizadas com usuários idosos 
+para o desenvolvimento do aplicativo "Simplifica". A síntese baseia-se exclusivamente
+nos áudios e transcrições das entrevistas com duas idosas de 63 anos. 
+
+Resumo Executivo
+  Os achados indicam um público com dois perfis de proficiência distintos: uma usuária
+que domina redes sociais e pesquisas (E2), e outra com dificuldades motoras e cognitivas
+em tarefas básicas como escrita e envio de mídia (E1). 
+Os pontos críticos para o design do  Simplifica  são:  (1)  Necessidade absoluta de fontes
+escaláveis;  (2)  Priorização total do WhatsApp e ligações familiares;  (3)  Demanda por um
+filtro contra spam telefônico; e  (4)  Simplificação do fluxo de "escrita e envio", que gera
+frustração. A interface deve focar em reduzir a dependência de ajuda externa para interpretar
+avisos do sistema.
+    1. Perfil dos Entrevistados
+      Com base nos dados coletados, identificam-se dois perfis de usuários:
+
+          Entrevistada 1 (E1)	
+          Idade: 63 anos 
+          Sexo: Feminino	
+          Familiaridade: usa há 3 anos. Com suporte a WhatsApp e aplicativos de cursos corporativos.	
+          Auxílio: Dependência frequente de auxílio externo, recorrendo principalmente a netos,
+sobrinhos e filhos para configurações e resolução de problemas no aparelho.
+
+
+          Entrevistada 2 (E2)
+          Idade: 63 anos
+          Sexo: Feminino
+          Familiaridade: usa celular há 10 anos. Afirma manejar o aparelho corretamente e realizar
+tarefas sozinha.
+          Auxílio: Busca ajuda de terceiros apenas quando não entende uma mensagem ou aviso específico.
+
+
+
+    2. Funcionalidades Mais Utilizadas
+      As funções são listadas em ordem de frequência e relevância mencionada:
+        1.	WhatsApp:  Principal canal para conversas com familiares (filhos/sobrinhos) e trabalho (E1 e E2).
+        2.	Pesquisas na Internet:  Utilizado frequentemente por E2.
+        3.	Ligações Telefônicas:  Realização de chamadas básicas (E1 e E2).
+        4.	Redes Sociais:  Uso frequente de Facebook e Instagram (E2).
+        5.	Música:  Audição de música evangélica (E1, AUD-20260724-WA0188.m4a).
+        6.	Envio de Mensagens e Fotos:  Atividades cotidianas que, embora frequentes, apresentam dificuldades para E1.
+        7. Dificuldades Relatadas
+            a) Motoras
+            ●	Escrita e Gestos:  E1 relata que escrever e mandar mensagens são tarefas difíceis (E1, Pergunta 03 - Motivo: Catarata).
+            ●	Toques Acidentais:  E2 negou explicitamente a ocorrência de toques acidentais ou apertar botões por engano (AUD-20260725-WA0706.mp4).
+            
+            b) Visuais
+            ●	Tamanho da Fonte:  E1 utilizava fontes pequenas, mas agora usa fontes "bem grandes" para conseguir enxergar,
+devido a um histórico de catarata (E1, Pergunta 06).
+            ●	E2:  Relata não ter problemas com o tamanho de letras ou ícones.
+
+            c) Cognitivas
+            ●	Complexidade de Tarefas:  E1 sente dificuldade em realizar cursos da empresa pelo celular, enviar fotos e fazer chamadas de
+vídeo (E1, Pergunta 03).
+            ●	Mensagens de Sistema:  E2 demonstra necessidade de auxílio externo quando aparecem avisos ou mensagens na tela que ela não
+entende (AUD-20260725-WA0706.mp4).
+
+            d) Emocionais
+            ●	Incômodo e Invasão:  E1 relata forte incômodo com ligações constantes de operadoras, gerando a necessidade de desligar o 
+aparelho repetidamente (E1, Pergunta 10).
+
+          8. Funcionalidades Desnecessárias ou Ignoradas
+            ●	Serviços Financeiros e Documentos:  E1 não realiza transferências bancárias nem pesquisa documentos pelo celular.
+            ●	Excesso de Interface:  E2 afirmou que a configuração atual "está de bom tamanho" e que sabe manejar os botões presentes, 
+não identificando excessos (AUD-20260725-WA0706.mp4).
+
+          9. Expectativas e Sugestões Espontâneas
+            ●	Comunicação Direta:  E1 mencionou que o "jeito mais fácil" de falar com as pessoas seria pessoalmente (E1, Pergunta 8).
+            ●	Socorro/Emergência:  Em situações de risco, E1 sugere uma solução analógica (sair na rua e pedir socorro aos vizinhos),
+enquanto E2 prefere o uso de mensagens de texto/WhatsApp.
+
+          10. Requisitos Funcionais Extraídos
+            ID,Descrição,Prioridade
+            RF01,"O sistema deve oferecer um atalho rápido para o WhatsApp, para que o usuário se comunique com familiares e trabalho 
+com um clique.",Alta
+            RF02,"O sistema deve permitir a configuração de fontes em tamanho extra-grande, para garantir a leitura por usuários com 
+histórico de problemas visuais.",Alta
+            RF03,"O sistema deve simplificar o processo de envio de fotos e vídeos, para reduzir a complexidade cognitiva relatada por
+usuários.",Média
+            RF04,"O sistema deve incluir um filtro ou facilitador de bloqueio para chamadas de operadoras (telemarketing), para reduzir 
+o incômodo constante.",Média
+            RF05,"O sistema deve possuir um botão de ""Pedir Socorro"" que envie uma mensagem automática para contatos de emergência.",Média
+
+          11. Requisitos Não Funcionais Extraídos
+            ●	Acessibilidade Visual:  O sistema deve suportar alto contraste e escalonamento de texto agressivo sem quebrar o layout 
+(Fonte: E1, Pergunta 06).
+            ●	Usabilidade (Tolerância ao Erro):  A interface deve prover explicações simples para avisos do sistema, visando diminuir a 
+dependência de terceiros (Fonte: E2, AUD-20260725-WA0706.mp4).
+            ●	Simplicidade de Navegação:  Redução de submenus para funções de comunicação (escrita e vídeo), visando mitigar dificuldades 
+motoras e cognitivas (Fonte: E1, Pergunta 03).
+
+          12. Citações-Chave (Trechos de Impacto)
+                1.	"Eu consigo enxergar porque coloco bem grande." —  E1, sobre a adaptação à catarata.
+                2.	"Tem essas ligações de operadoras que me incomoda muito, elas ligam constantemente e toda hora tenho que desligar." —  E1,
+    sobre a maior frustração no uso do aparelho.
+                3.	"Quando eu não entendo, eu procuro a ajuda de uma pessoa que entenda para me explicar." —  E2, sobre a barreira linguística/
+    cognitiva da interface.
+                4.	"Celular para mim é só para falar com os parentes, né? Os filhos, ouvir música evangélica." —  E1, definindo o propósito central
+    do dispositivo.
+
+          13. Lacunas Identificadas
+            ●	Detalhamento da Escrita:  Não ficou claro se a dificuldade de Ester em "escrever" é por conta do tamanho do teclado virtual, 
+falta de familiaridade com o alfabeto digital ou questões motoras finas (tremor).
+            
+            ●	Uso de Câmera:  Embora Ester cite dificuldade em mandar fotos, não foi explorado se o problema está em  tirar  a foto ou no 
+fluxo de compartilhamento  dentro dos apps.
+
+
+Declaração de Uso de Inteligência Artificial (Prompt usado):
+
+  Você atuará como um pesquisador de UX (User Experience) especializado em design inclusivo e acessibilidade digital para idosos, auxiliando 
+a equipe do projeto "Simplifica" (aplicativo launcher simplificado para smartphones) na análise de entrevistas de campo.
+ 
+CONTEXTO DO PROJETO: O "Simplifica" é uma tela inicial (launcher) para Android/iOS voltada a idosos e pessoas com dificuldades motoras/cognitivas,
+com foco em alto contraste, navegação simplificada e redução de elementos de interface que causam confusão ou toques acidentais.
+ 
+FONTES DISPONÍVEIS: - Áudios das entrevistas realizada com 2 idosos - Documento escrito com anotações/transcrições complementares da entrevista
+ 
+TAREFA: Analise TODAS as fontes fornecidas (áudios e documento) e produza uma síntese estruturada, organizada nas seguintes categorias:
+ 
+1 - PERFIL DOS ENTREVISTADOS - Idade, nível de familiaridade com smartphones, quem auxilia o idoso no uso do celular (se houver).
+ 
+2 - FUNCIONALIDADES MAIS UTILIZADAS - Liste, em ordem de frequência de menção, quais funções do celular são realmente usadas no dia a dia (ex: ligação,
+WhatsApp, câmera, relógio).
+ 
+3 - DIFICULDADES RELATADAS - Categorize as dificuldades em: a) Motoras (toques acidentais, dificuldade em gestos como arrastar/deslizar) b) Visuais 
+(ícones pequenos, contraste baixo, texto ilegível) c) Cognitivas (confusão com menus, excesso de opções, medo de "estragar" o celular) 
+d) Emocionais (frustração, vergonha de pedir ajuda, ansiedade ao usar o app).
+ 
+4 - FUNCIONALIDADES DESNECESSÁRIAS OU IGNORADAS - O que os idosos nunca usam, não entendem ou consideram "excesso" na tela inicial atual (ex: widgets, 
+notificações de apps não usados, redes sociais específicas).
+ 
+5 - EXPECTATIVAS E SUGESTÕES ESPONTÂNEAS - Qualquer sugestão, desejo ou comparação feita espontaneamente pelo entrevistado (ex: "eu queria que fosse 
+como o telefone de botão de antes").
+ 
+6 - REQUISITOS FUNCIONAIS EXTRAÍDOS - Traduza os achados acima em uma lista numerada de requisitos funcionais no formato: "RF01 - O sistema deve [ação],
+para que [motivo/benefício ao usuário]." - Priorize os requisitos em Alta, Média ou Baixa prioridade, com base na frequência/intensidade com que foram 
+mencionados pelos entrevistados.
+ 
+7 - REQUISITOS NÃO FUNCIONAIS EXTRAÍDOS - Relacionados a usabilidade, acessibilidade, contraste, tamanho de fonte, tempo de resposta, tolerância a erro, etc.
+ 
+8 - CITAÇÕES-CHAVE (TRECHOS DE IMPACTO) - Selecione de 3 a 5 frases textuais mais representativas das entrevistas, que podem ser usadas para justificar decisões 
+de design no relatório acadêmico ou em uma apresentação para professor/banca/stakeholders.
+ 
+10 - LACUNAS IDENTIFICADAS - Aponte perguntas que ficaram sem resposta clara ou temas que merecem ser aprofundados em uma segunda rodada de entrevista/validação.
+ 
+FORMATO DE SAÍDA: - Use títulos e subtítulos correspondentes às 10 categorias acima. - Sempre que possível, cite a fonte (nome do áudio, timestamp, ou trecho do 
+documento) de onde a informação foi extraída, para garantir rastreabilidade metodológica (importante para a seção de Metodologia do artigo/relatório/documentação).
+- Ao final, gere um resumo executivo de até 10 linhas com os achados mais críticos (ex.: os requisitos principais) e organize a documentação da equipe com as 
+principais problemáticas nas respostas para o design da interface.
+ 
+IMPORTANTE: Não invente ou deduza informações que não estejam explicitamente presentes nas fontes. Caso uma categoria não tenha dados suficientes nas entrevistas, 
+indique "Dado insuficiente nas fontes disponíveis" em vez de presumir uma resposta.
+
