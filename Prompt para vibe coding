@@ -17,3 +17,13 @@ Fontes em tamanho extra-grande para legibilidade.
 Layout em coluna (flexbox) com 3 botões gigantes ocupando quase toda a largura da tela.
 Os botões devem ser links diretos (<a>): um para o WhatsApp ([https://wa.me/](https://wa.me/)...), um para o discador (tel:...) e um botão vermelho de SOS que abre o WhatsApp com uma mensagem de socorro pré-escrita.
 Restrição técnica: Gere a versão de código HTML e CSS (em um único arquivo) mais simples e curta possível, mas que resolva o meu problema. Não utilize frameworks externos, lógicas complexas de JavaScript ou animações."
+
+
+Atualização adicionando comandos no idex.html:
+"Atue como um desenvolvedor Front-end. Preciso atualizar o arquivo index.html do projeto 'Simplifica' para adicionar um botão de Câmera.
+Requisitos obrigatórios:
+
+Adicione o novo botão utilizando a tag HTML nativa <input type="file" accept="image/*" capture="camera">.
+Estilize esse input (ou o rótulo <label> associado a ele) para que fique visualmente idêntico aos outros botões da interface: gigante, ocupando a largura da tela, com fundo escuro, texto branco em fonte extra-grande e bordas de alto contraste.
+O botão deve ter um ícone de câmera (pode ser um emoji 📷 ou um espaço para imagem) e o texto 'Câmera'.
+Restrição técnica: gere a versão de código HTML e CSS mais simples e curta possível, mas que resolva o meu problema. Não adicione nenhum JavaScript complexo para processar ou salvar a foto neste momento, o objetivo é apenas abrir a câmera com sucesso."
