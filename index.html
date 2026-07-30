@@ -5,155 +5,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Simplifica</title>
     <style>
-        ```html
-<style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    
-    body { 
-        background-color: #121212; 
-        color: #ffffff; 
-        font-family: system-ui, -apple-system, sans-serif; 
-        height: 100vh; 
-        overflow-y: auto; 
-        padding: 30px 20px; 
-        display: flex; 
-        flex-direction: column; 
-        gap: 25px; 
-    }
-    
-    .btn { 
-        display: flex; 
-        justify-content: center; 
-        align-items: center; 
-        width: 100%; 
-        min-height: 16vh; 
-        border-radius: 30px; 
-        text-decoration: none; 
-        color: #ffffff; 
-        font-size: 2.4rem; 
-        font-weight: 900; 
-        text-align: center; 
-        border: 4px solid; 
-        /* Efeito 3D de botão físico */
-        box-shadow: 0 12px 0 #000000, 0 16px 20px rgba(0,0,0,0.6); 
-        cursor: pointer; 
-        flex: 1; 
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-        transition: transform 0.1s, box-shadow 0.1s; 
-    }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        /* Tema Claro de Alto Contraste */
+        body { 
+            background-color: #F0F2F5; /* Fundo claro, mas não branco puro para reduzir fadiga */
+            color: #111111; 
+            font-family: system-ui, -apple-system, sans-serif; 
+            height: 100vh; 
+            overflow-y: auto; 
+            padding: 20px; 
+            display: flex; 
+            flex-direction: column; 
+            gap: 15px; 
+        }
+        
+        /* Estrutura do Botão: Foto (Esquerda) + Texto (Centro) + Ícone (Direita) */
+        .btn { 
+            display: flex; 
+            align-items: center; 
+            width: 100%; 
+            min-height: 16vh; 
+            border-radius: 20px; 
+            text-decoration: none; 
+            background-color: #FFFFFF;
+            border: 4px solid #DDDDDD;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            cursor: pointer; 
+            flex: 1; 
+            padding: 10px 15px;
+            gap: 15px;
+            color: #111111;
+        }
 
-    /* Animação que simula o botão sendo pressionado ao tocar */
-    .btn:active {
-        transform: translateY(8px);
-        box-shadow: 0 4px 0 #000000, 0 8px 10px rgba(0,0,0,0.6);
-    }
-    
-    /* Fundos em gradiente premium com bordas coloridas para identificação rápida */
-    .btn-wpp { background: linear-gradient(145deg, #103020, #0a1c12); border-color: #25D366; }
-    .btn-tel { background: linear-gradient(145deg, #102030, #0a121c); border-color: #34B7F1; }
-    .btn-cam { background: linear-gradient(145deg, #333333, #151515); border-color: #aaaaaa; }
-    .btn-sos { background: linear-gradient(145deg, #660000, #220000); border-color: #ff4444; }
-    
-    input[type="file"] { display: none; }
-    
-    .settings-icon { 
-        position: fixed; 
-        top: 25px; 
-        right: 20px; 
-        background: #222222; 
-        border: 2px solid #555;
-        border-radius: 50%; 
-        width: 60px;
-        height: 60px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 1.8rem; 
-        color: #fff; 
-        z-index: 10; 
-        cursor: pointer; 
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
-    }
-    
-    #settings { 
-        display: none; 
-        flex-direction: column; 
-        gap: 20px; 
-        background: #181818; 
-        padding: 30px; 
-        border-radius: 30px; 
-        font-size: 1.2rem; 
-        min-height: 100vh; 
-    }
-    
-    input, select, button.action-btn { 
-        font-size: 1.3rem; 
-        padding: 16px; 
-        width: 100%; 
-        margin-top: 8px; 
-        border-radius: 16px; 
-        border: 2px solid #444; 
-        background: #2a2a2a;
-        color: #ffffff;
-    }
-    
-    button.action-btn { 
-        background: #ffffff; 
-        color: #000000; 
-        font-weight: bold; 
-        cursor: pointer; 
-        border: none;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); 
-    }
-    
-    .del-btn { 
-        background: #cc0000; 
-        color: white; 
-        padding: 14px; 
-        border-radius: 16px; 
-        border: none; 
-        margin-top: 16px; 
-        width: 100%; 
-        cursor: pointer; 
-        font-weight: bold; 
-    }
-    
-    .contact-item { 
-        border: 2px solid #555; 
-        background: #222; 
-        padding: 20px; 
-        border-radius: 20px; 
-        margin-bottom: 16px; 
-    }
-</style>
+        .btn:active { background-color: #F8F9FA; transform: scale(0.98); }
+        
+        /* Cores específicas nas bordas para guiar visualmente */
+        .btn-wpp { border-color: #25D366; }
+        .btn-tel { border-color: #007AFF; }
+        .btn-cam { border-color: #6C757D; background-color: #F8F9FA; }
+        .btn-sos { border-color: #FF3B30; background-color: #FFF0F0; color: #CC0000; }
+        
+        /* Espaço para a Foto */
+        .avatar {
+            width: 75px; 
+            height: 75px; 
+            border-radius: 50%; 
+            background-color: #E4E6EB; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            font-size: 2.5rem; 
+            object-fit: cover; 
+            border: 2px solid #CCC;
+            flex-shrink: 0;
+        }
+
+        /* Textos e Ícones */
+        .btn-text { flex: 1; font-size: 1.8rem; font-weight: 800; text-align: left; line-height: 1.1; }
+        .btn-icon { font-size: 2.8rem; flex-shrink: 0; }
+        
+        input[type="file"].hidden-cam { display: none; }
+        
+        /* Configurações (Fundo escuro mantido apenas para destacar que é uma área de edição) */
+        .settings-icon { position: fixed; top: 15px; right: 15px; background: #FFF; border: 2px solid #DDD; border-radius: 50%; width: 50px; height: 50px; font-size: 1.5rem; color: #000; z-index: 10; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+        #settings { display: none; flex-direction: column; gap: 20px; background: #111; color: #FFF; padding: 25px; border-radius: 20px; font-size: 1.2rem; min-height: 100vh; }
+        
+        #settings input, #settings select, button.action-btn { font-size: 1.2rem; padding: 14px; width: 100%; margin-top: 8px; border-radius: 12px; border: none; }
+        button.action-btn { background: #FFFFFF; color: #000000; font-weight: bold; cursor: pointer; border: 2px solid #DDD; }
+        .del-btn { background: #CC0000; color: white; padding: 12px; border-radius: 12px; border: none; margin-top: 10px; width: 100%; font-weight: bold; }
+        .contact-item { border: 2px solid #444; background: #222; padding: 15px; border-radius: 12px; margin-bottom: 12px; }
+        .file-label { display: block; background: #444; color: #FFF; text-align: center; padding: 12px; border-radius: 12px; margin-top: 8px; font-size: 1rem; cursor: pointer; }
+    </style>
 </head>
 <body>
     <button class="settings-icon" onclick="toggle()">⚙️</button>
 
-    <div id="app" style="display: flex; flex-direction: column; gap: 12px; flex: 1;">
-        <div id="dynamic-list" style="display: flex; flex-direction: column; gap: 12px; flex: 1;"></div>
-        <label class="btn btn-cam">📷 Câmera <input type="file" accept="image/*" capture="camera"></label>
-        <a id="btn-sos" href="#" class="btn btn-sos">SOS EMERGÊNCIA</a>
+    <!-- Tela Principal do App -->
+    <div id="app" style="display: flex; flex-direction: column; gap: 15px; flex: 1;">
+        <div id="dynamic-list" style="display: flex; flex-direction: column; gap: 15px; flex: 1;"></div>
+        
+        <label class="btn btn-cam">
+            <div class="avatar">🖼️</div>
+            <div class="btn-text">Câmera</div>
+            <div class="btn-icon">📷</div>
+            <input type="file" accept="image/*" capture="camera" class="hidden-cam">
+        </label>
+        
+        <a id="btn-sos" href="#" class="btn btn-sos">
+            <img id="sos-avatar" class="avatar" style="display:none;">
+            <div id="sos-placeholder" class="avatar">🚨</div>
+            <div class="btn-text" style="color: #CC0000;">SOS EMERGÊNCIA</div>
+            <div class="btn-icon">🚑</div>
+        </a>
     </div>
 
+    <!-- Tela de Configurações -->
     <div id="settings">
         <h2>Configurações</h2>
         
-        <div style="background: #222; padding: 15px; border-radius: 8px;">
+        <div style="background: #222; padding: 15px; border-radius: 12px;">
             <h3>Adicionar Botão</h3>
             <select id="type"><option value="wpp">WhatsApp</option><option value="tel">Ligação</option></select>
             <input id="name" placeholder="Nome do botão">
             <input id="num" placeholder="Número (ex: 5583999999999)">
-            <button class="action-btn" onclick="add()">Adicionar</button>
+            
+            <label class="file-label">
+                📸 Escolher Foto da Pessoa
+                <input type="file" id="photoFile" accept="image/*" style="display:none" onchange="readContactPhoto(this)">
+            </label>
+            <small id="photoStatus" style="color:#aaa; display:block; margin-top:5px;"></small>
+
+            <button class="action-btn" style="margin-top: 15px;" onclick="add()">Adicionar</button>
         </div>
 
-        <div style="background: #222; padding: 15px; border-radius: 8px;">
-            <h3>Número SOS</h3>
+        <div style="background: #222; padding: 15px; border-radius: 12px;">
+            <h3>Botão SOS (Socorro)</h3>
             <input id="sosNum" placeholder="Número para socorro">
-            <button class="action-btn" onclick="saveSOS()">Salvar SOS</button>
+            <label class="file-label">
+                📸 Escolher Foto SOS
+                <input type="file" accept="image/*" style="display:none" onchange="readSOSPhoto(this)">
+            </label>
+            <small id="sosPhotoStatus" style="color:#aaa; display:block; margin-top:5px;"></small>
+            <button class="action-btn" style="margin-top: 15px;" onclick="saveSOS()">Salvar SOS</button>
         </div>
 
-        <div style="background: #222; padding: 15px; border-radius: 8px;">
+        <div style="background: #222; padding: 15px; border-radius: 12px;">
             <h3>Excluir Botões</h3>
             <div id="edit-list"></div>
         </div>
@@ -162,11 +139,32 @@
     </div>
 
     <script>
+        // Estrutura de dados com suporte para foto em Base64
         let contacts = JSON.parse(localStorage.getItem('simp_contacts')) || [
-            { type: 'wpp', name: 'Zap Ana Larissa', num: '5583999999999' },
-            { type: 'tel', name: 'Ligar Teones', num: '5583988888888' }
+            { type: 'wpp', name: 'Zap Ana Larissa', num: '5583999999999', photo: '' },
+            { type: 'tel', name: 'Ligar Teones', num: '5583988888888', photo: '' }
         ];
-        let sos = localStorage.getItem('simp_sos') || '5583999999999';
+        let sosData = JSON.parse(localStorage.getItem('simp_sos_data')) || { num: '5583999999999', photo: '' };
+        
+        let tempContactPhoto = '';
+        let tempSosPhoto = '';
+
+        // Converte a imagem para Base64
+        function readContactPhoto(input) {
+            if (input.files && input.files[0]) {
+                let reader = new FileReader();
+                reader.onload = e => { tempContactPhoto = e.target.result; document.getElementById('photoStatus').innerText = '✅ Foto carregada!'; };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        function readSOSPhoto(input) {
+            if (input.files && input.files[0]) {
+                let reader = new FileReader();
+                reader.onload = e => { tempSosPhoto = e.target.result; document.getElementById('sosPhotoStatus').innerText = '✅ Foto SOS carregada!'; };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
 
         function render() {
             const list = document.getElementById('dynamic-list');
@@ -176,26 +174,60 @@
             contacts.forEach((c, i) => {
                 const prefix = c.type === 'wpp' ? 'https://wa.me/' : 'tel:+';
                 const cls = c.type === 'wpp' ? 'btn-wpp' : 'btn-tel';
-                list.innerHTML += `<a href="${prefix}${c.num}" class="btn ${cls}">${c.name}</a>`;
+                const icon = c.type === 'wpp' ? '💬' : '📞';
+                
+                // Se tem foto renderiza <img>, senão renderiza o placeholder 👤
+                const avatarHtml = c.photo 
+                    ? `<img src="${c.photo}" class="avatar">` 
+                    : `<div class="avatar">👤</div>`;
+
+                list.innerHTML += `
+                    <a href="${prefix}${c.num}" class="btn ${cls}">
+                        ${avatarHtml}
+                        <div class="btn-text">${c.name}</div>
+                        <div class="btn-icon">${icon}</div>
+                    </a>`;
+                    
                 edit.innerHTML += `<div class="contact-item"><b>${c.name}</b><br>${c.num} <button class="del-btn" onclick="del(${i})">Excluir</button></div>`;
             });
             
-            document.getElementById('btn-sos').href = `https://wa.me/${sos}?text=SOCORRO!%20Preciso%20de%20ajuda%20urgente!`;
-            document.getElementById('sosNum').value = sos;
+            // Renderiza SOS
+            document.getElementById('btn-sos').href = `https://wa.me/${sosData.num}?text=SOCORRO!%20Preciso%20de%20ajuda%20urgente!`;
+            document.getElementById('sosNum').value = sosData.num;
+            
+            if(sosData.photo) {
+                document.getElementById('sos-avatar').src = sosData.photo;
+                document.getElementById('sos-avatar').style.display = 'block';
+                document.getElementById('sos-placeholder').style.display = 'none';
+            }
             
             localStorage.setItem('simp_contacts', JSON.stringify(contacts));
-            localStorage.setItem('simp_sos', sos);
+            localStorage.setItem('simp_sos_data', JSON.stringify(sosData));
         }
 
         function add() {
             const type = document.getElementById('type').value;
             const name = document.getElementById('name').value;
             const num = document.getElementById('num').value.replace(/\D/g,'');
-            if (name && num) { contacts.push({ type, name, num }); render(); document.getElementById('name').value = ''; document.getElementById('num').value = ''; }
+            if (name && num) { 
+                contacts.push({ type, name, num, photo: tempContactPhoto }); 
+                tempContactPhoto = ''; 
+                document.getElementById('photoStatus').innerText = '';
+                document.getElementById('name').value = ''; 
+                document.getElementById('num').value = ''; 
+                render(); 
+            }
+        }
+
+        function saveSOS() { 
+            sosData.num = document.getElementById('sosNum').value.replace(/\D/g,''); 
+            if(tempSosPhoto) sosData.photo = tempSosPhoto;
+            render(); 
+            alert('SOS Atualizado!'); 
         }
 
         function del(i) { contacts.splice(i, 1); render(); }
-        function saveSOS() { sos = document.getElementById('sosNum').value.replace(/\D/g,''); render(); alert('SOS Atualizado!'); }
+        
         function toggle() { 
             const s = document.getElementById('settings');
             const a = document.getElementById('app');
