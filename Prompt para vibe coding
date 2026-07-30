@@ -27,3 +27,25 @@ Adicione o novo botão utilizando a tag HTML nativa <input type="file" accept="i
 Estilize esse input (ou o rótulo <label> associado a ele) para que fique visualmente idêntico aos outros botões da interface: gigante, ocupando a largura da tela, com fundo escuro, texto branco em fonte extra-grande e bordas de alto contraste.
 O botão deve ter um ícone de câmera (pode ser um emoji 📷 ou um espaço para imagem) e o texto 'Câmera'.
 Restrição técnica: gere a versão de código HTML e CSS mais simples e curta possível, mas que resolva o meu problema. Não adicione nenhum JavaScript complexo para processar ou salvar a foto neste momento, o objetivo é apenas abrir a câmera com sucesso."
+
+
+Atualização para botões editáveis:
+"tue como um desenvolvedor Front-end especialista em acessibilidade. Preciso atualizar o meu arquivo index.html do projeto 'Simplifica' para que os botões se tornem dinâmicos e customizáveis pelo próprio usuário.
+
+Requisitos obrigatórios:
+
+    Armazenamento: Use localStorage com Vanilla JavaScript para salvar as configurações no celular do usuário. Nenhum backend deve ser necessário.
+
+    Renderização Dinâmica: A tela inicial deve ler o localStorage e renderizar os botões. Deve ser possível ter múltiplos botões de WhatsApp (ex: 'Zap Filha', 'Zap Médico').
+
+    Modo de Edição: Adicione um botão discreto de 'Configurações' (ícone de engrenagem ⚙️) que abre um formulário simples. Neste formulário, o usuário (ou o familiar que o auxilia) pode:
+
+        Adicionar um novo botão (escolhendo se é WhatsApp ou Ligação, digitando o Nome e o Número).
+
+        Editar o número do botão vermelho de 'SOCORRO'.
+
+        Excluir botões existentes.
+
+    Estilo: Mantenha a interface atual de acessibilidade: botões gigantes (flexbox em coluna), fundo escuro (#000000), letras brancas extra-grandes e alto contraste. O botão da câmera (<input type='file'>) deve continuar fixo na tela.
+
+Lembre-se: gere a versão de código HTML, CSS e JS (tudo no mesmo arquivo) mais simples e curta possível mas que resolva o meu problema. Não use bibliotecas externas."
