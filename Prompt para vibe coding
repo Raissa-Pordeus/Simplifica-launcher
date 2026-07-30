@@ -104,3 +104,20 @@ Atualizações para melhorias gerais de identificação e layout da interface:
 "Quero que o fundo seja claro, noa necessariamente branco, mas claro. quero tambem que os icones de "zap" tem o icone de whatsapp e um espaço onde uma foto de uma pessoa possa ser anexada nas configuração iniciais
 da interface, os icones de "ligar" devem ter o icone de ligação e um espaço onde uma foto de uma pessoa possa ser anexada nas configuração iniciais da interface, os icones de "sos emergência" tem o icone de emergência e
 um espaço onde uma foto de uma pessoa possa ser anexada nas configuração iniciais da interface "
+
+
+
+Atualizações para o layout:
+"Atue como um UI/UX Designer focado em interfaces Apple/iOS. Preciso que você reescreva a tag <style> do meu arquivo index.html para deixar o meu aplicativo 'Simplifica' com um visual premium, moderno e extremamente 'clean', sem alterar nada do HTML ou do JavaScript atual.
+
+Aplique os seguintes conceitos de design:
+
+    Efeito Card Moderno: Remova todas as bordas grossas (border: 4px solid) da classe .btn. Use botões com fundo branco puro (#FFFFFF), border-radius: 24px, e uma sombra suave e difusa (box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05)) para dar aspecto tátil.
+
+    Indicadores de Cor Elegantes: Em vez de colorir a borda inteira, aplique a cor de identificação de cada botão apenas na lateral esquerda usando border-left: 8px solid. (Verde para .btn-wpp, Azul para .btn-tel, Cinza para .btn-cam, e Vermelho para .btn-sos).
+
+    Correção de Layout: Adicione padding-top: 75px na tag body para garantir que o ícone de configurações (.settings-icon) não fique sobreposto ao primeiro botão. Retire a borda do ícone de configurações e use um leve box-shadow.
+
+    Botão SOS: O fundo do botão SOS deve ser um vermelho muito suave (ex: #FFF5F5) para se destacar sutilmente do resto, mantendo o texto em vermelho escuro.
+
+Gere apenas o bloco <style> atualizado e completo. O código deve ser o mais curto possível, resolvendo esses problemas estéticos."
