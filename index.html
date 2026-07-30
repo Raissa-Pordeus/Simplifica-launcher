@@ -4,79 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Simplifica</title>
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        
-        /* Tema Claro de Alto Contraste */
-        body { 
-            background-color: #F0F2F5; /* Fundo claro, mas não branco puro para reduzir fadiga */
-            color: #111111; 
-            font-family: system-ui, -apple-system, sans-serif; 
-            height: 100vh; 
-            overflow-y: auto; 
-            padding: 20px; 
-            display: flex; 
-            flex-direction: column; 
-            gap: 15px; 
-        }
-        
-        /* Estrutura do Botão: Foto (Esquerda) + Texto (Centro) + Ícone (Direita) */
-        .btn { 
-            display: flex; 
-            align-items: center; 
-            width: 100%; 
-            min-height: 16vh; 
-            border-radius: 20px; 
-            text-decoration: none; 
-            background-color: #FFFFFF;
-            border: 4px solid #DDDDDD;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-            cursor: pointer; 
-            flex: 1; 
-            padding: 10px 15px;
-            gap: 15px;
-            color: #111111;
-        }
+    ```html
+<style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    /* Tema Claro iOS - Fundo reduz fadiga visual */
+    body { 
+        background-color: #F2F2F7; 
+        color: #1C1C1E; 
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+        height: 100vh; 
+        overflow-y: auto; 
+        padding: 75px 20px 20px 20px; /* Padding-top de 75px evita sobreposição com engrenagem */
+        display: flex; 
+        flex-direction: column; 
+        gap: 16px; 
+    }
+    
+    /* Efeito Card Moderno Apple/iOS */
+    .btn { 
+        display: flex; 
+        align-items: center; 
+        width: 100%; 
+        min-height: 16vh; 
+        border-radius: 24px; 
+        text-decoration: none; 
+        background-color: #FFFFFF;
+        border: none;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); 
+        cursor: pointer; 
+        flex: 1; 
+        padding: 10px 20px 10px 15px;
+        gap: 16px;
+        color: #1C1C1E;
+        transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1), background-color 0.2s;
+    }
 
-        .btn:active { background-color: #F8F9FA; transform: scale(0.98); }
-        
-        /* Cores específicas nas bordas para guiar visualmente */
-        .btn-wpp { border-color: #25D366; }
-        .btn-tel { border-color: #007AFF; }
-        .btn-cam { border-color: #6C757D; background-color: #F8F9FA; }
-        .btn-sos { border-color: #FF3B30; background-color: #FFF0F0; color: #CC0000; }
-        
-        /* Espaço para a Foto */
-        .avatar {
-            width: 75px; 
-            height: 75px; 
-            border-radius: 50%; 
-            background-color: #E4E6EB; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            font-size: 2.5rem; 
-            object-fit: cover; 
-            border: 2px solid #CCC;
-            flex-shrink: 0;
-        }
+    .btn:active { background-color: #F8F8F8; transform: scale(0.97); }
+    
+    /* Indicadores Laterais Elegantes (Cores nativas do iOS) */
+    .btn-wpp { border-left: 8px solid #34C759; }
+    .btn-tel { border-left: 8px solid #007AFF; }
+    .btn-cam { border-left: 8px solid #8E8E93; }
+    .btn-sos { border-left: 8px solid #FF3B30; background-color: #FFF5F5; color: #D70015; }
+    
+    /* Avatar com contorno sutil */
+    .avatar {
+        width: 70px; 
+        height: 70px; 
+        border-radius: 50%; 
+        background-color: #E5E5EA; 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        font-size: 2.5rem; 
+        object-fit: cover; 
+        border: 1px solid #E5E5EA;
+        flex-shrink: 0;
+    }
 
-        /* Textos e Ícones */
-        .btn-text { flex: 1; font-size: 1.8rem; font-weight: 800; text-align: left; line-height: 1.1; }
-        .btn-icon { font-size: 2.8rem; flex-shrink: 0; }
-        
-        input[type="file"].hidden-cam { display: none; }
-        
-        /* Configurações (Fundo escuro mantido apenas para destacar que é uma área de edição) */
-        .settings-icon { position: fixed; top: 15px; right: 15px; background: #FFF; border: 2px solid #DDD; border-radius: 50%; width: 50px; height: 50px; font-size: 1.5rem; color: #000; z-index: 10; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
-        #settings { display: none; flex-direction: column; gap: 20px; background: #111; color: #FFF; padding: 25px; border-radius: 20px; font-size: 1.2rem; min-height: 100vh; }
-        
-        #settings input, #settings select, button.action-btn { font-size: 1.2rem; padding: 14px; width: 100%; margin-top: 8px; border-radius: 12px; border: none; }
-        button.action-btn { background: #FFFFFF; color: #000000; font-weight: bold; cursor: pointer; border: 2px solid #DDD; }
-        .del-btn { background: #CC0000; color: white; padding: 12px; border-radius: 12px; border: none; margin-top: 10px; width: 100%; font-weight: bold; }
-        .contact-item { border: 2px solid #444; background: #222; padding: 15px; border-radius: 12px; margin-bottom: 12px; }
-        .file-label { display: block; background: #444; color: #FFF; text-align: center; padding: 12px; border-radius: 12px; margin-top: 8px; font-size: 1rem; cursor: pointer; }
-    </style>
+    /* Tipografia Clean e Legível */
+    .btn-text { flex: 1; font-size: 1.7rem; font-weight: 700; text-align: left; line-height: 1.15; letter-spacing: -0.5px; }
+    .btn-icon { font-size: 2.6rem; flex-shrink: 0; opacity: 0.85; }
+    
+    input[type="file"].hidden-cam { display: none; }
+    
+    /* Configurações - Discreto com Sombra Suave */
+    .settings-icon { 
+        position: fixed; 
+        top: 15px; 
+        right: 20px; 
+        background: #FFFFFF; 
+        border: none; 
+        border-radius: 50%; 
+        width: 48px; 
+        height: 48px; 
+        font-size: 1.5rem; 
+        color: #1C1C1E; 
+        z-index: 10; 
+        cursor: pointer; 
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+    }
+
+    #settings { display: none; flex-direction: column; gap: 20px; background: #1C1C1E; color: #FFF; padding: 25px; border-radius: 24px; font-size: 1.2rem; min-height: 100vh; }
+    
+    #settings input, #settings select, button.action-btn { font-size: 1.2rem; padding: 14px; width: 100%; margin-top: 8px; border-radius: 14px; border: none; }
+    button.action-btn { background: #FFFFFF; color: #000000; font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1); }
+    .del-btn { background: #FF3B30; color: white; padding: 12px; border-radius: 12px; border: none; margin-top: 10px; width: 100%; font-weight: 600; }
+    .contact-item { border: none; background: #2C2C2E; padding: 15px; border-radius: 16px; margin-bottom: 12px; }
+    .file-label { display: block; background: #3A3A3C; color: #FFF; text-align: center; padding: 12px; border-radius: 14px; margin-top: 8px; font-size: 1rem; cursor: pointer; }
+</style>
 </head>
 <body>
     <button class="settings-icon" onclick="toggle()">⚙️</button>
