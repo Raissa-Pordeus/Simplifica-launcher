@@ -49,3 +49,36 @@ Requisitos obrigatórios:
     Estilo: Mantenha a interface atual de acessibilidade: botões gigantes (flexbox em coluna), fundo escuro (#000000), letras brancas extra-grandes e alto contraste. O botão da câmera (<input type='file'>) deve continuar fixo na tela.
 
 Lembre-se: gere a versão de código HTML, CSS e JS (tudo no mesmo arquivo) mais simples e curta possível mas que resolva o meu problema. Não use bibliotecas externas."
+Para o Manifest.json temos o seguinte prompt:
+
+Atue como um desenvolvedor Front-end. Preciso criar o arquivo manifest.json para transformar minha página web em um PWA (Progressive Web App) que simula um aplicativo nativo.
+O projeto se chama 'Simplifica Launcher' (nome curto: 'Simplifica') e o arquivo inicial é o ./index.html.
+
+Configure o display como standalone para esconder a barra de navegação do celular.
+
+Defina a cor de fundo (background_color) e a cor do tema (theme_color) como preto (#000000).
+
+Adicione um array de ícones com apenas um ícone apontando para avatar.png, com o tamanho 192x192 e do tipo image/png.
+
+Lembre-se: se você precisar gerar algum código, gere a versão mais simples e curta possível mas que resolva o meu problema. Retorne apenas o código JSON estruturado. 
+Resposta:
+
+Your JSON file is ready.
+
+JSON
+{
+  "name": "Simplifica Launcher",
+  "short_name": "Simplifica",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "avatar.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
+
