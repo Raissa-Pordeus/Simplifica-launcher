@@ -82,3 +82,18 @@ JSON
   ]
 }
 
+
+Atualização para o visual do projeto:
+"Atue como um UI/UX Designer e Desenvolvedor Front-end. Preciso refatorar a tag <style> do arquivo index.html do meu projeto 'Simplifica' para torná-lo mais bonito, moderno e 'clean', sem alterar o JavaScript ou o HTML.
+
+Requisitos de Estilo:
+
+    Mantenha a acessibilidade para idosos (alto contraste e fontes extra-grandes). Troque o fundo preto puro por um tom de cinza muito escuro (ex: #121212) para reduzir o cansaço visual, mas mantendo o texto branco.
+
+    Adicione bordas bem arredondadas (border-radius: 24px) e um sombreamento suave (box-shadow) nos botões para criar profundidade, dando a sensação tátil de um botão físico e convidativo.
+
+    Otimize os espaçamentos internos (padding) e externos (gap) para que a tela 'respire' mais e fique com um visual minimalista.
+
+    Deixe o botão de 'Configurações' (⚙️) elegante e discreto no topo da tela, com fundo translúcido.
+
+Restrição técnica: se você precisar gerar algum código, gere a versão mais simples e curta possível mas que resolva o meu problema. Retorne apenas o bloco CSS atualizado."
