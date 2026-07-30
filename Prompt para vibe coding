@@ -97,3 +97,10 @@ Requisitos de Estilo:
     Deixe o botão de 'Configurações' (⚙️) elegante e discreto no topo da tela, com fundo translúcido.
 
 Restrição técnica: se você precisar gerar algum código, gere a versão mais simples e curta possível mas que resolva o meu problema. Retorne apenas o bloco CSS atualizado."
+
+
+
+Atualizações para melhorias gerais de identificação e layout da interface:
+"Quero que o fundo seja claro, noa necessariamente branco, mas claro. quero tambem que os icones de "zap" tem o icone de whatsapp e um espaço onde uma foto de uma pessoa possa ser anexada nas configuração iniciais
+da interface, os icones de "ligar" devem ter o icone de ligação e um espaço onde uma foto de uma pessoa possa ser anexada nas configuração iniciais da interface, os icones de "sos emergência" tem o icone de emergência e
+um espaço onde uma foto de uma pessoa possa ser anexada nas configuração iniciais da interface "
